@@ -4,3 +4,19 @@
   padding: 10px;
   box-shadow: 5px 10px red;
 }
+
+td, th{
+  border: 1px solid #000;
+  min-width: 80px;
+  height: 30px;
+  text-align: center;
+}
+
+.table{
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.so-am{
+  color: red;
+}

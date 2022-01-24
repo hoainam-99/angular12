@@ -7,4 +7,20 @@
   <h2 *ngIf="age >= 18">Bạn quá già rồi</h2>
   <h2 *ngIf="age < 18">Bạn còn trẻ lắm</h2>
   <button (click)="resetName()">Reset tên</button>
+<br><br><br>
+  <h1>Trái Cây</h1>
+  <table class="table">
+    <tr>
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Giá</th>
+      <th>Hạ Giá</th>
+    </tr>
+    <tr *ngFor="let trai of traiCay; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td> {{ trai.name }}</td>
+      <td [ngClass]="{'so-am': trai.price < 0}">{{ trai.price }}</td>
+      <td *ngIf="trai.sale">Đang hạ giá</td>
+    </tr>
+  </table>
 </div>
