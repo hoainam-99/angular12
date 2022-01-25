@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HighlightDirective } from './Directives/highlight.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlightDirective } from './Directives/highlight.directive';
     HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
-    HighlightDirective
+    HighlightDirective,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,

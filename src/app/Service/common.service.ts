@@ -12,4 +12,8 @@ export class CommonService {
 
     return n*n;
   }
+
+  public submitData(data: any): void{
+    console.log('Gửi data lên server. Data = ', data);
+  }
 }

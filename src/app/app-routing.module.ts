@@ -1,3 +1,4 @@
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +15,9 @@ const routes: Routes = [
   },{
     path: 'about',
     component: AboutComponent
+  },{
+    path: 'templateForm',
+    component: TemplateDrivenFormComponent
   },{
     path: '**',
     component: PageNotFoundComponent
