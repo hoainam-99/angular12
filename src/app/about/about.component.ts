@@ -1,3 +1,4 @@
+import { CommonService } from './../Service/common.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
   public loginName = 'user';
   public myColor = 'blue';
-  constructor() { }
+  public counter = 0;
+  public counterBinhPhuong = 0;
+  constructor(private common: CommonService) { }
 
   ngOnInit(): void {
+    this.counter = this.common.counter;
+    this.counterBinhPhuong = this.common.binhPhuong(this.counter);
+    this.common.counter++;
   }
 
 }
