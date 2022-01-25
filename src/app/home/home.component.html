@@ -8,8 +8,8 @@
   <h2 *ngIf="age < 18">Bạn còn trẻ lắm</h2>
   <button (click)="resetName()">Reset tên</button>
 <br><br><br>
-  <h1>Trái Cây</h1>
-  <table class="table">
+  <!-- <h1>Trái Cây</h1> -->
+  <!-- <table class="table">
     <tr>
       <th>STT</th>
       <th>Tên</th>
@@ -18,9 +18,17 @@
     </tr>
     <tr *ngFor="let trai of traiCay; let i = index">
       <td>{{ i + 1 }}</td>
-      <td> {{ trai.name }}</td>
-      <td [ngClass]="{'so-am': trai.price < 0}">{{ trai.price }}</td>
+      <td> {{ trai.name | uppercase }}</td>
+      <td [ngClass]="{'so-am': trai.price < 0}">{{ trai.price | currency: "VND":"symbol":"1.2" }}</td>
       <td *ngIf="trai.sale">Đang hạ giá</td>
     </tr>
-  </table>
+  </table> -->
+  <label for="">Tỉnh / Thành phố</label>
+  <select name="" id="" (change)="changeCity($event)">
+    <option *ngFor="let data of vnData" [value]="data.city">{{ data.city }}</option>
+  </select><br>
+  <label for="">Quận / Huyện</label>
+  <select name="" id="">
+    <option *ngFor="let distrist of districts" [value]="distrist">{{ distrist }}</option>
+  </select>
 </div>
