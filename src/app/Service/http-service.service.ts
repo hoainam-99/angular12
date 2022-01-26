@@ -19,10 +19,15 @@ export class HttpServiceService {
   constructor(private httpClient: HttpClient) { }
 
   public getComments():Observable<any>{
-    const url = `${this.REST_API_SERVER}/stdList`;
+    const url = `${this.REST_API_SERVER}/comments`;
     return this.httpClient.get<any>(url, this.httpOption);
   }
-  
+
+  public postComments(payload: any):Observable<any>{
+    const url = `${this.REST_API_SERVER}/comments`;
+    return this.httpClient.post<any>(url, payload,  this.httpOption);
+  }
+
   public getRandomUsers(n: number = 1):Observable<any>{
     const url = `${this.REST_API_SERVER_RANDOM_USERS}` + n;
     console.log(url);

@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment2",
+      "postId": 2
+    },
+    {
+      "body": "some comment 3",
+      "postId": 3,
+      "id": 3
+    },
+    {
+      "body": "some comment 4",
+      "postId": 4,
+      "id": 4
+    }
+  ],
+  "stdList": [
+    {
+      "id": 1,
+      "name": "Le Hoai Nam",
+      "email": "hoainam12121999@gmail.com"
+    },
+    {
+      "id": 2
+    },
+    {
+      "body": "some comment 3",
+      "postId": 3,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode",
+    "age": 20
+  }
+}
